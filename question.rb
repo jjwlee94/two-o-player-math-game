@@ -3,15 +3,16 @@ class Question
 
   def initialize
     @first_number = rand(1...20)
-    @second_number = rand(2...20)
-    @operator = rand(1...2)
+    @second_number = rand(1...20)
+    @operator = rand(1..2)
 
+    case @operator
     # Add two numbers
-    if @operator == 1
+    when 1
       @answer = @first_number + @second_number
       @operator_symbol = "+"
     # Subtract two numbers
-    else @operator == 2
+    when 2
       @answer = @first_number - @second_number
       @operator_symbol = "-"
     end
